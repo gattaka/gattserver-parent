@@ -22,6 +22,7 @@
 
 	<properties>
 		<scm.base.url>scm:git:https://github.com/gattaka</scm.base.url>
+		<releases
 	</properties>
 
 	<scm>
