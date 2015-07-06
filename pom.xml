@@ -16,7 +16,7 @@
 		<scm.base.url>scm:git:https://github.com/gattaka</scm.base.url>
 	</properties>
 
-	<scm>
+	<scm> 
 		<connection>${scm.base.url}/gattserver-parent</connection>
 		<developerConnection>${scm.base.url}/gattserver-parent</developerConnection>
 		<tag>HEAD</tag>
