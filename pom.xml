@@ -30,6 +30,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<jacoco.version>0.7.9</jacoco.version>
+		<maven-compiler-plugin-version>3.7.0</maven-compiler-plugin-version>
 	</properties>
 
 	<scm>
@@ -40,17 +42,63 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+
+				<!-- Compiler plugin -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.7.0</version>
+					<version>${maven-compiler-plugin-version}</version>
 					<configuration>
 						<source>${maven.compiler.source}</source>
 						<target>${maven.compiler.source}</target>
 					</configuration>
 				</plugin>
+
+				<!-- JaCoCo code coverage reporting -->
+				<!-- http://www.eclemma.org/jacoco/ -->
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>${jacoco.version}</version>
+					<executions>
+						<execution>
+							<id>prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>report</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>post-unit-test</id>
+							<phase>test</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+							<configuration>
+								<!-- Sets the path to the file which contains the execution data. -->
+								<dataFile>target/jacoco.exec</dataFile>
+								<!-- Sets the output directory for the code coverage report. -->
+								<outputDirectory>target/jacoco-ut</outputDirectory>
+							</configuration>
+						</execution>
+					</executions>
+					<configuration>
+						<systemPropertyVariables>
+							<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+						</systemPropertyVariables>
+					</configuration>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
+
+		<!-- Maven release -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -59,5 +107,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>
