@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cz.gattserver</groupId>
 	<artifactId>gattserver-parent</artifactId>
-	<version>1.0.10-SNAPSHOT</version>
+	<version>1.0.9-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Gattserver projects parent</name>
 
@@ -14,12 +13,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>gattserver-nexus-release</id>
+			<id>Gattserver-release</id>
 			<name>Gattserver Repository</name>
 			<url>http://gattserver.cz:8081/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>gattserver-nexus-snapshot</id>
+			<id>Gattserver-snapshot</id>
 			<name>Gattserver Repository</name>
 			<url>http://gattserver.cz:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
