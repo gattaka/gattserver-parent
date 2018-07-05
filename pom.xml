@@ -15,12 +15,12 @@
 		<repository>
 			<id>Gattserver-release</id>
 			<name>Gattserver Repository</name>
-			<url>file://c:/Users/Hynek/.m2/repository</url>
+			<url>http://gattserver.cz:8081/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>Gattserver-snapshot</id>
 			<name>Gattserver Repository</name>
-			<url>file://c:/Users/Hynek/.m2/repository</url>
+			<url>http://gattserver.cz:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
