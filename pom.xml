@@ -13,12 +13,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>Gattserver-release</id>
+			<id>gattserver-nexus-release</id>
 			<name>Gattserver Repository</name>
 			<url>http://gattserver.cz:8081/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>Gattserver-snapshot</id>
+			<id>gattserver-nexus-snapshot</id>
 			<name>Gattserver Repository</name>
 			<url>http://gattserver.cz:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
