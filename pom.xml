@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cz.gattserver</groupId>
 	<artifactId>gattserver-parent</artifactId>
-	<version>1.0.13</version>
+	<version>1.0.14-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Gattserver projects parent</name>
 
@@ -35,7 +35,7 @@
 
 	<scm>
 		<developerConnection>${scm.base.url}/gattserver-parent</developerConnection>
-		<tag>gattserver-parent-1.0.13</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<build>
