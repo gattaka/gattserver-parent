@@ -15,12 +15,12 @@
 		<repository>
 			<id>gattserver-nexus-release</id>
 			<name>Gattserver Repository</name>
-			<url>https://www.gattserver.cz:8843/repository/maven-releases/</url>
+			<url>https://nexus.gattserver.cz/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>gattserver-nexus-snapshot</id>
 			<name>Gattserver Repository</name>
-			<url>https://www.gattserver.cz:8843/repository/maven-snapshots/</url>
+			<url>https://nexus.gattserver.cz/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
